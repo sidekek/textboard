@@ -6,6 +6,8 @@ html
 {
     background-color: white;
     margin-bottom: 10px;
+    display: table;
+    padding: 1px;
 }
 .post-top
 {
