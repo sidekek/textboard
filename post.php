@@ -10,7 +10,7 @@ $general = json_decode(file_get_contents("data/general.json"));
 $general->number++;
 
 $thread = json_decode(file_get_contents("data/posts.json"));
-array_push($thread->posts, new post($general->number, substr($_POST["body"], 0, 1500), substr($_POST["name"], 0, 25)));
+array_push($thread->posts, new post($general->number, substr($_POST["body"], 0, 1500), substr($_POST["name"], 0, 25), time()));
 file_put_contents("data/posts.json", json_encode($thread));
 
 file_put_contents("data/general.json", json_encode($general));
